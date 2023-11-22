@@ -1,0 +1,8 @@
+n = int(input())
+arr_n = set(map(int,input().split()))
+m = int(input())
+arr_m = set(map(int,input().split()))
+rs = arr_n.difference(arr_m)
+rs.update(arr_m.difference(arr_n))
+rs = sorted(rs)
+print(*rs,sep='\n')
